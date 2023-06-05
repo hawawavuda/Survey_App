@@ -1,105 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="css/styles.css">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Survey App</title>
-</head>
-<body>
-  <header>
-    <nav class="navbar">
-      <ul class="navbar-list">
-        <li class="navbar-item"><a href="#">Home</a></li>
-        <li class="navbar-item"><a href="#">My Surveys</a></li>
-        <li class="navbar-item"><a href="#">Responses</a></li>
-        <li class="navbar-item"><a href="#">Create Survey</a></li>
-        <li class="navbar-item"><a href="#">Analytics</a></li>
-        <li class="navbar-item"><a href="#">Account Settings</a></li>
-        <li class="navbar-item"><a href="#">Help</a></li>
-      </ul>
-    </nav>
-  </header>
- <main>
-  <!-- Registration Form -->
-<form id="registration-form" action="register.php" method="POST">
-  <h2>Registration</h2>
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" required>
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" required>
-  <input type="submit" value="Register">
-</form>
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey App</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="#">Home</a></li>
+          <li class="navbar-item"><a href="#">My Surveys</a></li>
+          <li class="navbar-item"><a href="#">Responses</a></li>
+          <li class="navbar-item"><a href="#">Create Survey</a></li>
+          <li class="navbar-item"><a href="#">Analytics</a></li>
+          <li class="navbar-item"><a href="#">Account Settings</a></li>
+          <li class="navbar-item"><a href="#">Help</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Authentication form -->
+      <div class="register">
+        <form id="registration-form" action="register.php" method="POST">
+          <h2>Registration</h2>
+          <label class="username">Username:</label>
+          <input type="text" id="username" required />
+          <label class="email">Email:</label>
+          <input type="email" id="email" required />
+          <label class="password">Password:</label>
+          <input type="password" id="password" required />
+          <input type="submit" value="Register" />
+        </form>
 
-<!-- Authentication Form -->
-<form id="login-form" action="login.php" method="POST">
-  <h2>Login</h2>
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" required>
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" required>
-  <input type="submit" value="Login">
-</form>
+        <form id="login-form">
+          <h2>Login</h2>
+          <label class="username">Username:</label>
+          <input type="text" id="username" required />
+          <label class="password">Password:</label>
+          <input type="password" id="password" required />
+          <input type="submit" />
+        </form>
+      </div>
+      
+        <div class="main">
+          <div class="step__1">
+          <div class="step" id="step1">
+            <h2>Demographic Questions:</h2>
+            
+            <div class="question">
+              <label class="q3">What is your age? :</label>
+              <select id="q3" required>
+                <option value="">Select an option</option>
+                <option value="option1">18-24</option>
+                <option value="option2">25-32</option>
+                <option value="option3">33-40</option>
+              </select>
+            </div>
+            <div class="question">
+              <label class="q2">What's your gender? :</label>
+              <label for="myCheckbox">Male</label>
+              <input type="checkbox" id="myCheckbox" name="myCheckbox" value="1">
+              <label for="myCheckbox">Female</label>
+              <input type="checkbox" id="myCheckbox" name="myCheckbox" value="1">
+              <label for="myCheckbox">Prefer not to answer</label>
+              <input type="checkbox" id="myCheckbox" name="myCheckbox" value="1">
+
+            </div>
+            <div class="question">
+              <label class="q2"><strong>What's your marital status :</strong></label>
+              <label for="myCheckbox">Single</label>
+              <input type="checkbox" id="myCheckbox" name="myCheckbox" value="1">
+              <label for="myCheckbox">Married</label>
+              <input type="checkbox" id="myCheckbox" name="myCheckbox" value="1">
+              <label for="myCheckbox">Prefer not to answer</label>
+              <input type="checkbox" id="myCheckbox" name="myCheckbox" value="1">
+              </div>
+
+              <div class="question">
+                <label class="q3">What's your current country of residence? :</label>
+                <select id="q3" required>
+                  <option value="">Select an option</option>
+                  <option value="option1">Kenya</option>
+                  <option value="option2">Tanzania</option>
+                  <option value="option3">Uganda</option>
+                  <option value="option1">Somalia</option>
+                  <option value="option1">Ethiopia</option>
+                </select>
+              </div>
+            <div class="question">
+              <label class="q1">Question :</label>
+              <input type="text" id="q1" name="q1" required />
+            </div>
+            </div>
+            </div>
 
 
+            <!-- step 2 -->
+            <div class="step__2">
 
-<div class="step" id="step1">
-  <h2>Step 1</h2>
-  <div class="question">
-    <label for="q1">Question 1:</label>
-    <input type="text" id="q1" name="q1" required>
-  </div>
-  <div class="question">
-    <label for="q2">Question 2:</label>
-    <textarea id="q2" name="q2" required></textarea>
-  </div>
-  
-  <button type="button" onclick="nextStep(2)">Next</button>
-</div>
-<div class="step" id="step2">
-  <h2>Step 2</h2>
-  <div class="question">
-    <label for="q3">Question 3:</label>
-    <select id="q3" name="q3" required>
-      <option value="">-- Select an option --</option>
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 2</option>
-      <option value="option3">Option 3</option>
-    </select>
-  </div>
-  <div class="question">
-    <label for="q4">Question 4:</label>
-    <input type="number" id="q4" name="q4" required>
-  </div>
-  <button type="button" onclick="prevStep(1)">Previous</button>
-  <button type="button" onclick="nextStep(3)">Next</button>
-</div>
+            <div class="step" id="step2">
+              <h2>Lifestyle and Health Behavior Questions:</h2>
+              <div class="question">
+                <label class="q1">Question :</label>
+                <input type="text" id="q1" name="q1" required />
+              </div>
+              <div class="question">
+                <label class="q2">Question :</label>
+                <textarea id="q2" name="q2" required></textarea>
+              </div>
 
-<!-- Step 3 -->
-<div class="step" id="step3">
-  <h2>Step 3</h2>
-  <div class="question">
-    <label for="q5">Question 5:</label>
-    <input type="text" id="q5" name="q5" required>
-  </div>
-  <div class="question">
-    <label for="q6">Question 6:</label>
-    <input type="text" id="q6" name="q6" required>
-  </div>
-  <button type="button" onclick="prevStep(2)">Previous</button>
-  <button type="submit">Submit</button>
-</div>
-</form>
- </main>
+              <button type="button" onclick="nextStep(2)">Next</button>
+            </div>
+            <div class="question">
+              <label class="q4">Question :</label>
+              <input type="number" id="q4" name="q4" required />
+            </div>
+            <div>
+            <button type="button" onclick="prevStep(1)">Previous</button>
+            <button type="button" onclick="nextStep(3)">Next</button>
+          </div>
+          </div>
+          <!-- step 3 -->
 
-  <footer>
-    <p>© 2023 Multi-Step Survey. All rights reserved.</p>
-  </footer>
+          <div class="step__3">
 
-  
-  
-</body>
+          <div class="step" id="step2">
+            <h2>Attitude and Opinion Questions:</h2>
+            <div class="question">
+              <label class="q1">Question :</label>
+              <input type="text" id="q1" name="q1" required />
+            </div>
+            <div class="question">
+              <label class="q2">Question :</label>
+              <textarea id="q2" name="q2" required></textarea>
+            </div>
+
+            <button type="button" onclick="nextStep(2)">Next</button>
+          </div>
+          <div class="question">
+            <label class="q4">Question :</label>
+            <input type="number" id="q4" required />
+          </div>
+          <div>
+          <button type="button">Previous</button>
+          <button type="button">Next</button>
+        </div>
+        </div>
+        
+
+        
+        <!-- step 4-->
+        <div class="step__4">
+        <div class="step" id="step3">
+          <h2>Technology Usage Questions:</h2>
+          <div class="question">
+            <label class="q5">Question :</label>
+            <input type="text" id="q5" name="q5" required />
+          </div>
+          <div class="question">
+            <label class="q6">Question :</label>
+            <input type="text" id="q6" required />
+          </div>
+          <button type="button">Previous</button>
+          <button type="submit">Submit</button>
+        </div>
+        </div>
+      
+    </main>
+    <div class="footer">
+      <footer>
+        <p>© 2023 Multi-Step Survey. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
 </html>

@@ -1,5 +1,5 @@
 form {
-  max-width: 300px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 10px;
   background-color: #ddd;
@@ -23,7 +23,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  width: 100%;
+  width: 70%;
   padding: 10px;
   margin-top: 5px;
   border: none;
@@ -31,7 +31,7 @@ input[type="password"] {
 }
 
 input[type="submit"] {
-  width: 100%;
+  width: 50%;
   padding: 10px;
   margin-top: 10px;
   background-color: #4caf50;

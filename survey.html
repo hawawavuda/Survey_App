@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey App</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="#">Home</a></li>
+          <li class="navbar-item"><a href="#">My Surveys</a></li>
+          <li class="navbar-item"><a href="#">Responses</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main">
+        <div class="step__1">
+          <div class="step" id="step1">
+            <h2>Demographic Questions:</h2>
+
+            <div class="question">
+              <label class="q1">What is your age? :</label>
+              <select id="q1" required>
+                <option value="">Select an option</option>
+                <option value="option1">18-24</option>
+                <option value="option2">25-32</option>
+                <option value="option3">33-40</option>
+              </select>
+            </div>
+            <div class="question">
+              <label class="q2" id="q2">What's your gender? :</label>
+              <label for="myCheckbox">Male</label>
+              <input
+                type="checkbox"
+                id="myCheckbox"
+                name="myCheckbox"
+                value="1"
+              />
+              <label for="myCheckbox">Female</label>
+              <input
+                type="checkbox"
+                id="myCheckbox"
+                name="myCheckbox"
+                value="1"
+              />
+              <label for="myCheckbox">Prefer not to answer</label>
+              <input
+                type="checkbox"
+                id="myCheckbox"
+                name="myCheckbox"
+                value="1"
+              />
+            </div>
+            <div class="question">
+              <label class="q3" id>What's your marital status? :</label>
+              <label for="myCheckbox">Single</label>
+              <input
+                type="checkbox"
+                id="myCheckbox"
+                name="myCheckbox"
+                value="1"
+              />
+              <label for="myCheckbox">Married</label>
+              <input
+                type="checkbox"
+                id="myCheckbox"
+                name="myCheckbox"
+                value="1"
+              />
+              <label for="myCheckbox">Prefer not to answer</label>
+              <input
+                type="checkbox"
+                id="myCheckbox"
+                name="myCheckbox"
+                value="1"
+              />
+            </div>
+
+            <div class="question">
+              <label class="q3"
+                >What's your current country of residence? :</label
+              >
+              <select id="q3" required>
+                <option value="">Select an option</option>
+                <option value="option1">Kenya</option>
+                <option value="option2">Tanzania</option>
+                <option value="option3">Uganda</option>
+                <option value="option1">Somalia</option>
+                <option value="option1">Ethiopia</option>
+              </select>
+            </div>
+            <div>
+              <button type="button" onclick="nextStep(3)">Next</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- step 2 -->
+        <div class="step__2">
+          <div class="step" id="step2">
+            <h2>Lifestyle and Health Behavior Questions:</h2>
+            <div class="question">
+              <label class="q4"
+                >How often do you engage in physical exercise or activity?
+                :</label
+              >
+              <textarea id="q4"required></textarea>
+            </div>
+            <div class="question">
+              <label class="q5"
+                >Do you follow a balanced diet that includes fruits, vegetables,
+                and whole grains? :</label
+              >
+              <textarea id="q5"required></textarea>
+            </div>
+            <div class="question">
+              <label class="q6"
+                >How often do you consume sugary or carbonated drinks? :</label
+              >
+              <textarea id="q6"required></textarea>
+            </div>
+            <div class="question">
+              <label class="q7"
+                >Do you smoke tobacco or use any tobacco-related products?
+                :</label
+              >
+              <textarea id="q7"required></textarea>
+            </div>
+
+            <div class="question">
+              <label class="q8">How often do you consume alcohol? :</label>
+              <textarea id="q8" required></textarea>
+            </div>
+            <div class="question">
+              <label class="q9"
+                >Do you actively manage stress through relaxation techniques,
+                meditation, or other methods? :</label
+              >
+              <textarea id="q9" required></textarea>
+            </div>
+            <div>
+              <button type="button" onclick="prevStep(1)">Previous</button>
+              <button type="button" onclick="nextStep(3)">Next</button>
+            </div>
+          </div>
+
+          <!-- step 3 -->
+
+          <div class="step__3">
+            <div class="step" id="step2">
+              <h2>Attitude and Opinion Questions:</h2>
+              <div class="question">
+                <label class="q10"
+                  >To what extent do you agree or disagree with the statement:
+                  "Technology has improved our lives"? :</label
+                >
+                <textarea id="q10" required></textarea>
+              </div>
+              <div class="question">
+                <label class="q11"
+                  >How important do you consider environmental sustainability in
+                  your purchasing decisions? :</label
+                >
+                <textarea id="q11" required></textarea>
+              </div>
+              <div class="question">
+                <label class="q12"
+                  >Do you believe that social media has a positive impact on
+                  society? :</label
+                >
+                <textarea id="q12" required></textarea>
+              </div>
+              <div class="question">
+                <label class="q13"
+                  >How confident are you in the government's ability to address
+                  economic challenges? :</label
+                >
+                <textarea id="q13" required></textarea>
+                <div class="question">
+                  <label class="q14"
+                    >How satisfied are you with the current state of public
+                    transportation in your area? :</label
+                  >
+                  <textarea id="q14" required></textarea>
+                </div>
+              </div>
+              <div>
+                <button type="button">Previous</button>
+                <button type="button">Next</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- step 4-->
+          <div class="step__4">
+            <div class="step" id="step3">
+              <h2>Technology Usage Questions:</h2>
+              <div class="question">
+                <label class="q15"
+                  >How frequently do you use the internet? :</label
+                >
+                <textarea id="q15" required></textarea>
+              </div>
+              <div class="question">
+                <label class="q16"
+                  >Which devices do you use to access the internet? :</label
+                >
+                <select id="q16" required>
+                  <option value="">Select an option</option>
+                  <option value="option1">SmartPhone</option>
+                  <option value="option2">Laptop</option>
+                  <option value="option3">Desktop computer</option>
+                  <option value="option1">Tablet</option>
+                  <option value="option1">Smart TV</option>
+                </select>
+              </div>
+              <div class="question">
+                <label class="q17"
+                  >How many hours per day do you spend on social media
+                  platforms? :</label
+                >
+                <textarea id="q17" required></textarea>
+              </div>
+              <div class="question">
+                <label class="q18">Question :</label>
+                <select id="q18" required>
+                  <option value="">Select an option</option>
+                  <option value="option1">Facebook</option>
+                  <option value="option2">Instagram</option>
+                  <option value="option3">Twitter</option>
+                  <option value="option1">LinkedIn</option>
+                  <option value="option1">Snapchat</option>
+                  <option value="option1">TikTok</option>
+                  <option value="option1">Pinterest</option>
+                </select>
+              </div>
+              <div class="question">
+                <label class="q19"
+                  >How comfortable are you with using new technologies and
+                  digital tools? :</label
+                >
+                <textarea id="q19" required></textarea>
+              </div>
+              <div class="question">
+                <label class="q20"
+                  >How often do you stream movies, TV shows, or other video
+                  content online? :</label
+                >
+                <textarea id="q20" name="q2" required></textarea>
+              </div>
+              <div class="question">
+                <label class="q5"
+                  >Do you regularly use any productivity or organizational apps?
+                  If so, which ones? :</label
+                >
+                <textarea id="q2" name="q2" required></textarea>
+              </div>
+              <button type="button">Previous</button>
+              <button type="submit">Submit</button>
+            </div>
+          </div>
+          <div class="footer">
+            <footer>
+              <p>© 2023 Survey. All rights reserved.by Hawah Didoz</p>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

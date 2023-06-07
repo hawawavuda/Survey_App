@@ -1,5 +1,5 @@
-@use "./section/nav";
+@use "./pages/home/nav";
 @use "./utilities/base";
-@use "./section/form";
-@use "./section/main";
-@use "./section/footer";
+@use "./pages/home/form";
+@use "./pages/surveys/main";
+@use "./pages/home/footer";
